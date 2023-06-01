@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+      color: colors.whiteClr,
       child: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -195,6 +196,40 @@ class HomeScreen extends StatelessWidget {
                                     ],
                                   ),
                                 ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.all(14),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(
+                                          30,
+                                        ),
+                                        color: Colors.white,
+                                      ),
+                                      child: Text(
+                                        "Add To Cart",
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: colors.blClr,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      padding: EdgeInsets.all(12),
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: colors.blClr,
+                                      ),
+                                      child: Icon(
+                                        Icons.favorite_outline,
+                                        color: Colors.white38,
+                                      ),
+                                    ),
+                                  ],
+                                )
                               ],
                             ),
                           ),
