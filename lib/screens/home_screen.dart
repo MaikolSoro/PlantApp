@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../colors.dart';
+import 'product_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   List<String> categories = [
@@ -11,9 +13,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: colors.whiteClr,
-      child: SafeArea(
+    return Scaffold(
+      backgroundColor: colors.whiteClr,
+      //backgroundColor: Colors.redAccent,
+      body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -176,8 +179,19 @@ class HomeScreen extends StatelessWidget {
                                     children: [
                                       Padding(
                                         padding: const EdgeInsets.all(15),
-                                        child: Image.asset(
-                                            "images/Plant${index + 1}.png"),
+                                        child: InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    ProductScreen(),
+                                              ),
+                                            );
+                                          },
+                                          child: Image.asset(
+                                              "images/Plant${index + 1}.png"),
+                                        ),
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -238,6 +252,56 @@ class HomeScreen extends StatelessWidget {
                     },
                   ),
                 ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        height: 80,
+        child: Container(
+          margin: EdgeInsets.all(10),
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          decoration: BoxDecoration(
+            color: colors.gryClr,
+            borderRadius: BorderRadius.circular(30),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Icon(
+                CupertinoIcons.home,
+                color: Colors.black54,
+              ),
+              Icon(
+                Icons.favorite_outline,
+                color: Colors.black54,
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: colors.blClr,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 6,
+                      spreadRadius: 4,
+                    ),
+                  ],
+                ),
+                child: Icon(
+                  CupertinoIcons.qrcode,
+                  color: Colors.white54,
+                ),
+              ),
+              Icon(
+                Icons.shopping_bag_outlined,
+                color: Colors.black54,
+              ),
+              Icon(
+                CupertinoIcons.person,
+                color: Colors.black54,
               ),
             ],
           ),
