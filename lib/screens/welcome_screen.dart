@@ -43,7 +43,7 @@ class WelcomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => HomeScreen()));
             },
             child: Container(
-              padding: EdgeInsets.all(14),
+              padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
                 color: colors.grnClr,
                 shape: BoxShape.circle,
@@ -59,7 +59,7 @@ class WelcomeScreen extends StatelessWidget {
                 "GO",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 17,
+                  fontSize: 18,
                   fontWeight: FontWeight.w500,
                 ),
               ),
