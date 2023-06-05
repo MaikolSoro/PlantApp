@@ -2,15 +2,18 @@
 
 A new Flutter project.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#  Plant App ❤️
+🌞 Light Mode
+<table style="width:100%">
+  <tr>
+    <th>1.Screen welcome </th>
+    <th>2.Home Screen </th> 
+    <th>3.Details </th>
+ 
+  </tr>
+  <tr>
+    <td><img src = "https://github.com/MaikolSoro/PlantApp/assets/46753453/822463a5-b3ee-4cf6-b881-8a1c60a0917f" /></td> 
+    <td><img src = "https://github.com/MaikolSoro/PlantApp/assets/46753453/3d29aa1e-a206-4982-85c5-01aeb1d2c67a" /></td>
+    <td><img src = "https://github.com/MaikolSoro/PlantApp/assets/46753453/6e1f31bf-a0f0-45eb-b941-022cfc75ef7b" /></td> 
+  </tr>
+</table>
